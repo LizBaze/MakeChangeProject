@@ -10,14 +10,7 @@ public class CashRegister {
 
 	public static void makeChange() {
 		Scanner sc = new Scanner(System.in);
-		int twenties = 0;
-		int tens = 0;
-		int fives = 0;
-		int ones = 0;
-		int quarters = 0;
-		int dimes = 0;
-		int nickels = 0;
-		int pennies = 0;
+		int twenties = 0, tens = 0, fives = 0, ones = 0, quarters = 0, dimes = 0, nickels = 0, pennies = 0;
 
 		System.out.println("Please enter the transaction cost: ");
 		double total = rounder(sc.nextDouble());
@@ -86,7 +79,7 @@ public class CashRegister {
 		} else if (ones == 1 && (twenties >= 1 || tens >= 1 || fives >= 1)) {
 			changeGiven += ", 1 one dollar bill";
 		} else if (ones == 1) {
-			changeGiven += "1 one dollar bills";
+			changeGiven += "1 one dollar bill";
 		}
 		if (quarters > 1 && (twenties >= 1 || tens >= 1 || fives >= 1 || ones >= 1)) {
 			changeGiven += ", " + quarters + " quarters";
