@@ -29,7 +29,6 @@ public class CashRegister {
 
 		while (change > 0) {
 			rounder(change);
-			System.out.println("debug");
 			if (change / 20 >= 1) {
 				twenties += 1;
 				change -= 20;
@@ -66,11 +65,9 @@ public class CashRegister {
 		}
 
 		if (twenties > 1) {
-			changeGiven += twenties + "twenty dollar bills";
-			System.out.println(changeGiven);
+			changeGiven += twenties + " twenty dollar bills";
 		} else if (twenties == 1) {
 			changeGiven += "1 twenty dollar bill";
-			System.out.println(changeGiven);
 		}
 		if (tens > 1 && twenties >= 1) { // FINISH ACCOUNTING FOR COMMAS
 			changeGiven += ", " + tens + " ten dollar bills";
