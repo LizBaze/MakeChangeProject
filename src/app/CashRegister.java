@@ -139,7 +139,7 @@ public class CashRegister {
 	}
 
 	public static int rounder(double x) { // Rounds double to two decimals
-		x *= 100;
+		x = x * 100 + 0.1;
 		int y = (int) x;
 		return y;
 	}
